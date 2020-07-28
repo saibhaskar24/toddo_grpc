@@ -31,37 +31,60 @@ function createTodo (call, callback) {
 }
 
 
-function findTodo(call, callback) {    
-    var k = todos.find(p => p.id == call.request.id);
+function findTodo(call, callback) { 
+    try {   
+        var k = todos.find(p => p.id == call.request.id);
+    }
+    catch(err) {
+        console.log("error",err.message);
+        callback(null, k);   
+      }
     callback(null, k);   
 }
 
 
 
 function updateTodo(call, callback) {    
-    var k = todos.find(p => p.id == call.request.id);
-    k.text = call.request.text;
+    try {  
+        var k = todos.find(p => p.id == call.request.id);
+        k.text = call.request.text;
+    }
+    catch(err) {
+        console.log("error",err.message);
+        callback(null, k);   
+    }
     callback(null, k);   
 }
 
 
 function deleteTodo(call, callback) {
-    var k = todos.findIndex(p => p.id == call.request.id);
-    delete todos[k];
+    try { 
+        var k = todos.findIndex(p => p.id == call.request.id);
+        delete todos[k];
+    }
+    catch(err) {
+        console.log("error",err.message);
+        callback(null, k);   
+    }
     callback(null, call.request.id);     
 }
 
 
 
 function makeCompletedTodo(call, callback) {
+    try { 
     var k = todos.find(p => p.id == call.request.id);
     k.iscompleted = true;
+    }
+    catch(err) {
+        console.log("error",err.message);
+        callback(null, k);   
+    }
     callback(null, k);   
 }
 
 
 function readTodosStream(call, callback) {
-    console.log(todos);
     
     todos.forEach(t => call.write(t));
     call.end();
