@@ -17,26 +17,26 @@ client.createTodo({
 })
 
 
-client.updateTodo({
-    "id": 1,
-    "text": text
-}, (err, response) => {
-    console.log("Update response from server " + JSON.stringify(response))
-})
+// client.updateTodo({
+//     "id": 1,
+//     "text": text
+// }, (err, response) => {
+//     console.log("Update response from server " + JSON.stringify(response))
+// })
 
 
-client.deleteTodo({
-    "id": 1
-}, (err, response) => {
-    console.log("Delete response from server " + JSON.stringify(response))
-})
+// client.deleteTodo({
+//     "id": 1
+// }, (err, response) => {
+//     console.log("Delete response from server with id " + JSON.stringify(response))
+// })
 
 
-client.makeCompletedTodo({
-    "id": 1
-}, (err, response) => {
-    console.log("Mark completed response from server " + JSON.stringify(response))
-})
+// client.makeCompletedTodo({
+//     "id": 1
+// }, (err, response) => {
+//     console.log("Mark completed response from server " + JSON.stringify(response))
+// })
 
 const call = client.readTodosStream();
 call.on("data", item => {

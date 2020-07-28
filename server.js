@@ -32,23 +32,30 @@ function createTodo (call, callback) {
 
 
 
-function updateTodo(call, callback) {
-    callback(null, {"items": todos})   
+function updateTodo(call, callback) {    
+    var k = todos.find(p => p.id == call.request.id);
+    k.text = call.request.text;
+    callback(null, k);   
 }
 
 
 function deleteTodo(call, callback) {
-    callback(null, {"items": todos})   
+    var k = todos.findIndex(p => p.id == call.request.id);
+    delete todos[k];
+    callback(null, call.request.id);     
 }
 
 
 
 function makeCompletedTodo(call, callback) {
-    callback(null, {"items": todos})   
+    var k = todos.find(p => p.id == call.request.id);
+    k.iscompleted = true;
+    callback(null, k);   
 }
 
 
 function readTodosStream(call, callback) {
+    console.log(todos);
     
     todos.forEach(t => call.write(t));
     call.end();
