@@ -1,12 +1,15 @@
-const a = [
-    { id: 1, text: 'adas', iscompleted: false },
-    { id: 2, text: 'adas', iscompleted: false },
-    { id: 3, text: 'adas', iscompleted: false }
-  ]
+const readline = require('readline')
 
-var k = a.findIndex(p => p.id == 3)
-console.log(k)
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-delete a[k];
+rl.question("What do you think of node.js? ", function(answer) {
+  // TODO: Log the answer in a database
+  console.log("Thank you for your valuable feedback:", answer);
 
-console.log(a)
+  rl.close();
+});
+
+console.log("sda")

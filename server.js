@@ -15,6 +15,7 @@ server.addService(todoPackage.Todo.service,
         "updateTodo":updateTodo,
         "deleteTodo":deleteTodo,
         "makeCompletedTodo":makeCompletedTodo,
+        "findTodo":findTodo,
     });
 server.start();
 
@@ -29,6 +30,11 @@ function createTodo (call, callback) {
     callback(null, todoItem);
 }
 
+
+function findTodo(call, callback) {    
+    var k = todos.find(p => p.id == call.request.id);
+    callback(null, k);   
+}
 
 
 
