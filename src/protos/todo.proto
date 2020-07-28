@@ -3,7 +3,7 @@ syntax = "proto3";
 package todoPackage;
 
 service Todo {
-    rpc createTodo(TodoItem) returns (TodoItem);
+    rpc createTodo(AddToDoRequest) returns (TodoItem);
     rpc updateTodo(TodoItem) returns (TodoItem);
     rpc deleteTodo(TodoItem) returns (TodoItem);
     rpc makeCompletedTodo(TodoItem) returns (TodoItem);
@@ -15,8 +15,12 @@ service Todo {
 
 message voidNoParam {}
 
+message AddToDoRequest {
+    string text = 1;
+}
+
 message TodoItem {
-    int32 id = 1;
+    string id = 1;
     string text = 2;
     bool iscompleted = 3;
 }
