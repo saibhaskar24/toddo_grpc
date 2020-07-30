@@ -17,13 +17,22 @@ module.exports = ({todomodel}) => {
     }
     const deletetodo = async ({text}) => {
         const data = await todomodel.deleteOne({text});
-        console.log(data);
+        return data;
+    }
+    const updatetodo = async ({text,newtext}) => {
+        const data = await todomodel.updateOne({text},{text:newtext});
+        return data;
+    }
+    const markcompletedtodo = async ({text}) => {
+        const data = await todomodel.updateOne({text},{iscompleted:true});
         return data;
     }
     return Object.freeze({
         createtodo,
         isTextexist,
         readtodos,
-        deletetodo
+        deletetodo,
+        updatetodo,
+        markcompletedtodo
     });
 }
