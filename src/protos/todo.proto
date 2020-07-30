@@ -4,7 +4,7 @@ package todoPackage;
 
 service Todo {
     rpc createTodo(AddToDoRequest) returns (TodoItem);
-    rpc updateTodo(UpdateToDoRequest) returns (TodoItem);
+    rpc updateTodo(UpdateByIdToDoRequest) returns (TodoItem);
     rpc deleteTodo(AddToDoRequest) returns (TodoItem);
     rpc markCompletedTodo(MarkCompletedToDoRequest) returns (TodoItem);
     rpc findTodo(FindToDoRequest) returns (FindTodoItem);
@@ -19,6 +19,11 @@ message AddToDoRequest {
     string text = 1;
 }
 
+
+message UpdateByIdToDoRequest {
+    string id = 1;
+    string newtext = 2;
+}
 
 message UpdateToDoRequest {
     string text = 1;

@@ -1,8 +1,8 @@
 module.exports = ({db}) => {
-    return async ({text,newtext}) => {
-        const  exist = await db.todo.isTextexist({text});
+    return async ({id,newtext}) => {
+        const  exist = await db.todo.isIDexist({id});
         if (exist) {
-            const data = await db.todo.updatetodo({text,newtext});
+            const data = await db.todo.updatetodo({id,newtext});
             return data;
         }
         throw "Text doesn't exist";

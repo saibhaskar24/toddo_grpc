@@ -11,6 +11,13 @@ module.exports = ({todomodel}) => {
         }
         return false
     }
+    const isIDexist = async ({id}) => {
+        const exist = await todomodel.findOne({_id:id}).lean().exec();
+        if (exist) {
+            return true;
+        }
+        return false
+    }
     const findtodo = async ({text}) => {
         const data = await todomodel.findOne({text}).lean().exec();
         return {id:data._id,text,iscompleted: data.iscompleted};
@@ -19,16 +26,16 @@ module.exports = ({todomodel}) => {
         const data = await todomodel.find( {});
         return data;
     }
-    const deletetodo = async ({text}) => {
-        const data = await todomodel.findOneAndDelete({text});
+    const deletetodo = async ({id}) => {
+        const data = await todomodel.findOneAndDelete({_id:id});
         return {id:data._id,text, iscompleted: data.iscompleted};
     }
-    const updatetodo = async ({text,newtext}) => {
-        const data = await todomodel.findOneAndUpdate({text},{text:newtext}).lean().exec();
+    const updatetodo = async ({id,newtext}) => {
+        const data = await todomodel.findOneAndUpdate({_id:id},{text:newtext}).lean().exec();
         return {id:data._id,text:newtext,iscompleted: data.iscompleted};
     }
-    const markcompletedtodo = async ({text}) => {
-        const data = await todomodel.findOneAndUpdate({text},{iscompleted:true});
+    const markcompletedtodo = async ({id}) => {
+        const data = await todomodel.findOneAndUpdate({_id:id},{iscompleted:true});
         return {id:data._id,text:data.text,iscompleted: true};
     }
     return Object.freeze({
@@ -38,6 +45,7 @@ module.exports = ({todomodel}) => {
         deletetodo,
         updatetodo,
         markcompletedtodo,
-        findtodo
+        findtodo,
+        isIDexist
     });
 }
