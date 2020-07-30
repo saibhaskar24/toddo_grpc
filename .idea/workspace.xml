@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="761ebfdc-e7c7-4982-8ae7-131932f21b00" name="Default Changelist" comment="features added">
-      <change afterPath="$PROJECT_DIR$/src/use-cases/findtodo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/getstreamtodos.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/gettodos.controllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/todo.methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/todo.methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/protos/todo.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/protos/todo.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use-cases/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/use-cases/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use-cases/readstream.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/use-cases/readstream.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,6 +62,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\nodetest\todo\src\controllers" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -84,7 +88,9 @@
       <updated>1596025811949</updated>
       <workItem from="1596025815423" duration="119000" />
       <workItem from="1596065585324" duration="6744000" />
-      <workItem from="1596076067694" duration="663000" />
+      <workItem from="1596076067694" duration="838000" />
+      <workItem from="1596079855637" duration="416000" />
+      <workItem from="1596080877361" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="adding features">
       <created>1596069157113</created>
@@ -100,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596071902256</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="find">
+      <created>1596076841386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596076841386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,29 +135,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding features" />
     <MESSAGE value="features added" />
-    <option name="LAST_COMMIT_MESSAGE" value="features added" />
+    <MESSAGE value="find" />
+    <option name="LAST_COMMIT_MESSAGE" value="find" />
   </component>
   <component name="WindowStateProjectService">
     <state x="529" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596076116986">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="529" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1596076116986" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1596076690223">
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1596081654978">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1596076690223" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1596076690223">
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1596081654978" />
+    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1596081654978">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1596076690223" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1596076690223">
+    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1596081654978" />
+    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1596081654978">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1596076690223" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1596076690223">
+    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1596081654978" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1596081654978">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596076690223" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596081654978" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1596025928074">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
