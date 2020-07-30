@@ -13,23 +13,23 @@ module.exports = ({todomodel}) => {
     }
     const findtodo = async ({text}) => {
         const data = await todomodel.findOne({text}).lean().exec();
-        return data;
+        return {id:data._id,text,iscompleted: data.iscompleted};
     }
     const readtodos = async () => {
         const data = await todomodel.find( {});
         return data;
     }
     const deletetodo = async ({text}) => {
-        const data = await todomodel.deleteOne({text});
-        return data;
+        const data = await todomodel.findOneAndDelete({text});
+        return {id:data._id,text, iscompleted: data.iscompleted};
     }
     const updatetodo = async ({text,newtext}) => {
-        const data = await todomodel.updateOne({text},{text:newtext});
-        return data;
+        const data = await todomodel.findOneAndUpdate({text},{text:newtext}).lean().exec();
+        return {id:data._id,text:newtext,iscompleted: data.iscompleted};
     }
     const markcompletedtodo = async ({text}) => {
-        const data = await todomodel.updateOne({text},{iscompleted:true});
-        return data;
+        const data = await todomodel.findOneAndUpdate({text},{iscompleted:true});
+        return {id:data._id,text:data.text,iscompleted: true};
     }
     return Object.freeze({
         createtodo,

@@ -4,9 +4,9 @@ package todoPackage;
 
 service Todo {
     rpc createTodo(AddToDoRequest) returns (TodoItem);
-    rpc updateTodo(UpdateToDoRequest) returns (ModifiedToDo);
-    rpc deleteTodo(AddToDoRequest) returns (ModifiedToDo);
-    rpc markCompletedTodo(MarkCompletedToDoRequest) returns (ModifiedToDo);
+    rpc updateTodo(UpdateToDoRequest) returns (TodoItem);
+    rpc deleteTodo(AddToDoRequest) returns (TodoItem);
+    rpc markCompletedTodo(MarkCompletedToDoRequest) returns (TodoItem);
     rpc findTodo(FindToDoRequest) returns (FindTodoItem);
     rpc readTodos(voidNoParam) returns (TodoItems);
     rpc readTodosStream(voidNoParam) returns (stream TodoItem);
@@ -36,14 +36,6 @@ message FindToDoRequest {
 }
 
 
-
-
-message ModifiedToDo {
-    string n = 1;
-    string ok = 2;
-    string deletedCount = 3;
-}
-
 message TodoItem {
     string id = 1;
     string text = 2;
@@ -62,7 +54,6 @@ message ReadTodoItem {
     string _id = 1;
     string text = 2;
     bool iscompleted = 3;
-    int32 __v = 4;
 }
 
 message TodoItems {
