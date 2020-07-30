@@ -28,7 +28,7 @@ module.exports = ({todomodel}) => {
     }
     const deletetodo = async ({id}) => {
         const data = await todomodel.findOneAndDelete({_id:id});
-        return {id:data._id,text, iscompleted: data.iscompleted};
+        return {id:data._id,text:data.text, iscompleted: data.iscompleted};
     }
     const updatetodo = async ({id,newtext}) => {
         const data = await todomodel.findOneAndUpdate({_id:id},{text:newtext}).lean().exec();

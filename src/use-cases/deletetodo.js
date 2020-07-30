@@ -1,5 +1,5 @@
 module.exports = ({db}) => {
-    return async ({text}) => {
+    return async ({id}) => {
         const  exist = await db.todo.isIDexist({id});
         if (exist) {
             const data = await db.todo.deletetodo({id});

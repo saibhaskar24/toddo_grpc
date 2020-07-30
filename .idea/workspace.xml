@@ -25,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/src/protos/todo.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/protos/todo.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/use-cases/deletetodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/use-cases/deletetodo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/use-cases/markcompleted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/use-cases/markcompleted.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use-cases/updatetodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/use-cases/updatetodo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <workItem from="1596076067694" duration="838000" />
       <workItem from="1596079855637" duration="416000" />
       <workItem from="1596080877361" duration="3471000" />
-      <workItem from="1596092037182" duration="319000" />
+      <workItem from="1596092037182" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="adding features">
       <created>1596069157113</created>
@@ -129,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596084171544</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Text to id">
+      <created>1596092387179</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596092387179</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,37 +160,38 @@
     <MESSAGE value="find" />
     <MESSAGE value="streamdata" />
     <MESSAGE value="final display modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="final display modification" />
+    <MESSAGE value="Text to id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Text to id" />
   </component>
   <component name="WindowStateProjectService">
     <state x="529" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596076116986">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="529" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1596076116986" />
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1596084355348">
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1596093389203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1596084355348" />
-    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1596084355348">
+    <state width="1515" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1596093389203" />
+    <state width="1515" height="223" key="GridCell.Tab.0.center" timestamp="1596093389203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1596084355348" />
-    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1596084355348">
+    <state width="1515" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1596093389203" />
+    <state width="1515" height="223" key="GridCell.Tab.0.left" timestamp="1596093389202">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1596084355348" />
-    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1596084355348">
+    <state width="1515" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1596093389202" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right" timestamp="1596093389203">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596084355348" />
+    <state width="1515" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596093389203" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1596025928074">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1596025928074" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1596084173491">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1596092389270">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1596084173491" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1596092389270" />
     <state x="425" y="197" width="672" height="677" key="run.anything.popup" timestamp="1596067033438">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
