@@ -11,6 +11,10 @@ module.exports = ({todomodel}) => {
         }
         return false
     }
+    const findtodo = async ({text}) => {
+        const data = await todomodel.findOne({text}).lean().exec();
+        return data;
+    }
     const readtodos = async () => {
         const data = await todomodel.find( {});
         return data;
@@ -33,6 +37,7 @@ module.exports = ({todomodel}) => {
         readtodos,
         deletetodo,
         updatetodo,
-        markcompletedtodo
+        markcompletedtodo,
+        findtodo
     });
 }

@@ -4,7 +4,8 @@ const {
     deletetodo,
     readstream,
     updatetodo,
-    markcompletedtodo
+    markcompletedtodo,
+    findtodo
 } = require('../use-cases');
 
 const makeaddtodoController = require('./addtodo.controller');
@@ -16,6 +17,6 @@ module.exports = Object.freeze({
     "updateTodo":makeaddtodoController({usecase: updatetodo}),
     "deleteTodo":makeaddtodoController({usecase: deletetodo}),
     "markCompletedTodo":makeaddtodoController({usecase: markcompletedtodo}),
-    "findTodo":() => {}
+    "findTodo":makeaddtodoController({usecase: findtodo})
 })
 
