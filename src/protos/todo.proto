@@ -66,5 +66,5 @@ message ReadTodoItem {
 }
 
 message TodoItems {
-    repeated ReadTodoItem items = 1;
+    repeated TodoItem items = 1;
 }
