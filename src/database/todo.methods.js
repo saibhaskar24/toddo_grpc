@@ -11,9 +11,19 @@ module.exports = ({todomodel}) => {
         }
         return false
     }
-
+    const readtodos = async () => {
+        const data = await todomodel.find( {});
+        return data;
+    }
+    const deletetodo = async ({text}) => {
+        const data = await todomodel.deleteOne({text});
+        console.log(data);
+        return data;
+    }
     return Object.freeze({
         createtodo,
-        isTextexist
+        isTextexist,
+        readtodos,
+        deletetodo
     });
 }

@@ -5,7 +5,7 @@ package todoPackage;
 service Todo {
     rpc createTodo(AddToDoRequest) returns (TodoItem);
     rpc updateTodo(TodoItem) returns (TodoItem);
-    rpc deleteTodo(TodoItem) returns (TodoItem);
+    rpc deleteTodo(TodoItem) returns (AddToDoRequest);
     rpc makeCompletedTodo(TodoItem) returns (TodoItem);
     rpc findTodo(TodoItem) returns (TodoItem);
     rpc readTodos(voidNoParam) returns (TodoItems);
